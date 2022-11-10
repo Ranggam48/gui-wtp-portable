@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.19.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_U1OO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Time: &lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TQYX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_AX6A" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Status: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O0DT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_W1IP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">ON</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z0WZ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">SENSORS</Translation>
+      </Text>
+      <Text Id="__SingleUse_CJ1O" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Input Voltage</Translation>
+      </Text>
+      <Text Id="__SingleUse_VHEP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Frequency</Translation>
+      </Text>
+      <Text Id="__SingleUse_9MQJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Energy Use</Translation>
+      </Text>
+      <Text Id="__SingleUse_F8ML" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Flow Oxygen</Translation>
+      </Text>
+      <Text Id="__SingleUse_4BDT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Temp Oxygen</Translation>
+      </Text>
+      <Text Id="__SingleUse_X03P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Concen Oxygen </Translation>
+      </Text>
+      <Text Id="__SingleUse_KBA1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Power EAB</Translation>
+      </Text>
+      <Text Id="__SingleUse_7EL0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Voltage EAB</Translation>
+      </Text>
+      <Text Id="__SingleUse_YPU4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Current EAB</Translation>
+      </Text>
+      <Text Id="__SingleUse_K00T" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_FPAD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_OYWG" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_4LQF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; Hz</Translation>
+      </Text>
+      <Text Id="__SingleUse_3JVU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_F22P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; kWh</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZVKO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_AVSW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; W</Translation>
+      </Text>
+      <Text Id="__SingleUse_5WE1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.2</Translation>
+      </Text>
+      <Text Id="__SingleUse_YQV7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_UQGX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">27.1</Translation>
+      </Text>
+      <Text Id="__SingleUse_MVQG" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; lpm</Translation>
+      </Text>
+      <Text Id="__SingleUse_QQ0A" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">20.1</Translation>
+      </Text>
+      <Text Id="__SingleUse_F2GU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">= &lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="__SingleUse_T6YV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"> 0 </Translation>
+      </Text>
+      <Text Id="__SingleUse_WMDY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">=&lt;value&gt;V</Translation>
+      </Text>
+      <Text Id="__SingleUse_045G" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"> 0 </Translation>
+      </Text>
+      <Text Id="__SingleUse_AUL3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">=&lt;value&gt;A</Translation>
+      </Text>
+      <Text Id="__SingleUse_I93C" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_82K4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Back</Translation>
+      </Text>
+      <Text Id="__SingleUse_V52F" Alignment="Left" TypographyId="duty">
+        <Translation Language="GB">Control Process</Translation>
+      </Text>
+      <Text Id="__SingleUse_XSSW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Electrokoagulasi</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WP1" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Time </Translation>
+      </Text>
+      <Text Id="__SingleUse_2VX1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_FB10" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_PFW6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Control HVRDF</Translation>
+      </Text>
+      <Text Id="__SingleUse_WWXP" Alignment="Left" TypographyId="duty">
+        <Translation Language="GB">null</Translation>
+      </Text>
+      <Text Id="__SingleUse_BYJC" Alignment="Left" TypographyId="rpm">
+        <Translation Language="GB">Error Code = &lt;value&gt;  </Translation>
+      </Text>
+      <Text Id="__SingleUse_F0T1" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZM2E" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">ON</Translation>
+      </Text>
+      <Text Id="__SingleUse_8O1Z" Alignment="Left" TypographyId="rpm">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_JR84" Alignment="Left" TypographyId="rpm">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_FD95" Alignment="Left" TypographyId="rpm">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_D0L1" Alignment="Center" TypographyId="rpm">
+        <Translation Language="GB">&lt;&gt; Amp</Translation>
+      </Text>
+      <Text Id="__SingleUse_2K29" Alignment="Center" TypographyId="rpm">
+        <Translation Language="GB">&lt;&gt; rpm</Translation>
+      </Text>
+      <Text Id="__SingleUse_K9QH" Alignment="Center" TypographyId="duty">
+        <Translation Language="GB">&lt;&gt; %</Translation>
+      </Text>
+      <Text Id="__SingleUse_QDN6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STOP</Translation>
+      </Text>
+      <Text Id="__SingleUse_C1Z9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_9UR1" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Set Duty</Translation>
+      </Text>
+      <Text Id="__SingleUse_5GEV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">SENSOR</Translation>
+      </Text>
+      <Text Id="__SingleUse_RKDT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">HVRDF</Translation>
+      </Text>
+      <Text Id="__SingleUse_TP5O" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">PROCESS</Translation>
+      </Text>
+      <Text Id="__SingleUse_SDTG" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">MODE</Translation>
+      </Text>
+      <Text Id="__SingleUse_N116" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">BACK</Translation>
+      </Text>
+      <Text Id="__SingleUse_AGFD" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">BACK</Translation>
+      </Text>
+      <Text Id="__SingleUse_CQSN" Alignment="Center" TypographyId="rpm">
+        <Translation Language="GB">BACK</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0-9" />
+    <Typography Id="duty" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="rpm" Font="verdana.ttf" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="errorCode" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0x5A" />
+  </Typographies>
+</TextDatabase>

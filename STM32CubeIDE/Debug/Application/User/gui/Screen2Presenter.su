@@ -1,0 +1,16 @@
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:15:virtual void ModelListener::setCounterPresenter(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:15:virtual void ModelListener::changeDutyPresenter(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:15:virtual void ModelListener::setIndicatorPresenter(int, int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:32:15:virtual void ModelListener::updateTime(int, int, int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:36:15:virtual void ModelListener::updateOxygen(float, float, float)	0	static
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:27:10:Screen2Presenter::~Screen2Presenter()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:9:6:virtual void Screen2Presenter::activate()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:21:6:virtual void Screen2Presenter::setErrorCode(int)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:25:6:virtual void Screen2Presenter::setTimeElco(int)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:29:6:virtual void Screen2Presenter::setTimeFiltrasi(int)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:33:6:virtual void Screen2Presenter::setTimeProcess(uint32_t, uint32_t, uint32_t)	4	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:40:6:virtual void Screen2Presenter::setStatus()	0	static
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:27:10:virtual Screen2Presenter::~Screen2Presenter()	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:17:6:virtual void Screen2Presenter::setModePresenter(uint8_t, uint8_t)	0	static
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:27:10:virtual void* Screen2Presenter::_ZThn4_N16Screen2PresenterD1Ev()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:4:1:Screen2Presenter::Screen2Presenter(Screen2View&)	8	static

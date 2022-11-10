@@ -1,0 +1,18 @@
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:15:virtual void ModelListener::changeDutyPresenter(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:15:virtual void ModelListener::setIndicatorPresenter(int, int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:15:virtual void ModelListener::setErrorCode(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:15:virtual void ModelListener::setTimeElco(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:28:15:virtual void ModelListener::setTimeFiltrasi(int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:32:15:virtual void ModelListener::updateTime(int, int, int)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:36:15:virtual void ModelListener::updateOxygen(float, float, float)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:40:15:virtual void ModelListener::setTimeProcess(uint32_t, uint32_t, uint32_t)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:45:15:virtual void ModelListener::setStatus()	0	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:28:13:Screen4Presenter::~Screen4Presenter()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:13:6:virtual void Screen4Presenter::activate()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:23:6:virtual void Screen4Presenter::setCounterPresenter(int)	0	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:28:13:virtual Screen4Presenter::~Screen4Presenter()	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:38:6:virtual void Screen4Presenter::setDutyPresenter(uint8_t, float)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:43:6:virtual void Screen4Presenter::runMotorPresenter(uint8_t)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:48:6:virtual void Screen4Presenter::stopMotorPresenter(uint8_t)	0	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:28:13:virtual void* Screen4Presenter::_ZThn4_N16Screen4PresenterD1Ev()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:7:1:Screen4Presenter::Screen4Presenter(Screen4View&)	8	static

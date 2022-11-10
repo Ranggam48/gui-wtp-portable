@@ -1,0 +1,12 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:10:10:Screen4View::~Screen4View()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:11:6:virtual void Screen4View::tearDownScreen()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:41:6:virtual void Screen4View::setDutyClick()	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:46:6:virtual void Screen4View::runClick()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:50:6:virtual void Screen4View::stopClick()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:7:6:virtual void Screen4View::setupScreen()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:26:6:virtual void Screen4View::changeDuty(int)	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:32:6:virtual void Screen4View::setCounter(int)	16	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:10:10:virtual Screen4View::~Screen4View()	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:3:1:Screen4View::Screen4View()	8	static

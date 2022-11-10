@@ -1,0 +1,10 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:10:10:Screen5View::~Screen5View()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen5_screen/Screen5View.cpp:12:6:virtual void Screen5View::tearDownScreen()	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen5_screen/Screen5View.cpp:16:6:virtual void Screen5View::handleTick(float)	0	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen5_screen/Screen5View.cpp:8:6:virtual void Screen5View::setupScreen()	0	static
+../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:10:10:virtual Screen5View::~Screen5View()	8	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen5_screen/Screen5View.cpp:27:6:virtual void Screen5View::updateOxygen(float, float, float)	24	static
+C:/TouchGFXProjects/MyApplication_1/TouchGFX/gui/src/screen5_screen/Screen5View.cpp:4:1:Screen5View::Screen5View()	8	static

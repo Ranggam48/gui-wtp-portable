@@ -1,0 +1,7 @@
+../Application/User/Core/com_can.c:49:6:HAL_CAN_RxFifo1MsgPendingCallback	8	static
+../Application/User/Core/com_can.c:97:6:buffer_append_int32	8	static
+../Application/User/Core/com_can.c:104:6:comm_can_transmit_eid	16	static
+../Application/User/Core/com_can.c:117:6:comm_can_set_mode	16	static
+../Application/User/Core/com_can.c:125:6:comm_can_error_massage	16	static
+../Application/User/Core/com_can.c:134:6:comm_can_set_duty	16	static
+../Application/User/Core/com_can.c:143:6:comm_can_send_buffer	32	static
