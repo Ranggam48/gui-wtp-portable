@@ -4,12 +4,10 @@
  *  Created on: Apr 27, 2022
  *      Author: rangga
  */
-
-//#include "main.h"
 #include "stm32f7xx.h"
 #include "com_can.h"
 #include "string.h"
-#include "stdio.h"
+//#include "fungsi.h"
 //#include "crc.h"
 
 #define CAN_PACKET_SETMODE 35
@@ -17,15 +15,13 @@
 #define CAN_PACKET_FILL_RX_BUFFER 5
 #define CAN_PACKET_FILL_RX_BUFFER_LONG 6
 #define CAN_PACKET_PROCESS_RX_BUFFER 7
+#define RX_BUFFER_SIZE 256
 #define CAN_PACKET_SET_DUTY_GEN 36
 #define CAN_PACKET_ERRORMASSAGE 37
 #define CAN_PACKET_FILL_RX_BUFFER_F1 40
-#define RX_BUFFER_SIZE 256
 
 extern CAN_HandleTypeDef hcan1;
-extern uint8_t selfID;
-extern uint8_t rx_buffer[RX_BUFFER_SIZE];
-extern int errorCode;
+extern uint32_t selfID;
 
 CAN_RxHeaderTypeDef RxHeader;
 CAN_TxHeaderTypeDef TxHeader;
@@ -34,14 +30,21 @@ uint8_t TxData[8];
 uint8_t RxData[8];
 
 uint32_t TxMailbox, ind;
-int canErrorMessage, i;
+
+extern uint8_t rx_buffer[RX_BUFFER_SIZE];
+extern uint8_t rx_buffer_f4[32];
+unsigned int rxbuf_ind;
 
 uint8_t crc_low;
 uint8_t crc_high;
 uint8_t commands_send;
 
 unsigned int rxbuf_len;
-unsigned int rxbuf_ind;
+extern unsigned int rxbuf_ind;
+
+int canSetMode;
+extern int coba;
+extern uint32_t mode;
 
 //static unsigned int rx_buffer_last_id;
 
@@ -50,30 +53,27 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
 
-//	while ((rxmsg_tmp = comm_can_get_rx_frame()) != 0) {
-//				CANRxFrame rxmsg = *rxmsg_tmp;
-
 	if (RxHeader.IDE == CAN_ID_EXT) {
 		uint8_t id = RxHeader.ExtId & 0xFF;
 		uint8_t cmd = RxHeader.ExtId >> 8;
 
 		if (id == 255 || id == selfID) {
+
 			switch (cmd) {
-			case CAN_PACKET_SET_DUTY_GEN:
-				//canFromMaster = -1;
-				ind = 0;
-				//canFromMaster= buffer_get_int32(rxmsg.data8, &ind);
-				//vescCommandSet(canFromMaster);
+//			case CAN_PACKET_SETMODE:
+//				canSetMode = -1;
+//				ind = 0;
+//				mode = buffer_get_int32(RxData, &ind);
+//				//mode = canSetMode;
+//				//setMode(mode);
+//				break;
+			case CAN_PACKET_FILL_RX_BUFFER_F1:
+				memcpy(rx_buffer + RxData[0], RxData + 1, RxHeader.DLC - 1);
 				break;
 
-//			case CAN_PACKET_ERROR_MESSAGE:
-//				canErrorMessage = -1;
-//				ind = 0;
-//				canErrorMessage = buffer_get_int32(RxData, &ind);
-//				break;
-
 			case CAN_PACKET_FILL_RX_BUFFER:
-				memcpy(rx_buffer + RxData[0], RxData + 1, RxHeader.DLC - 1);
+				memcpy(rx_buffer_f4 + RxData[0], RxData + 1, RxHeader.DLC - 1);
+				coba++;
 				break;
 
 			case CAN_PACKET_FILL_RX_BUFFER_LONG:
@@ -82,16 +82,15 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 				if (rxbuf_ind < RX_BUFFER_SIZE) {
 					memcpy(rx_buffer + rxbuf_ind, RxData + 2, RxHeader.DLC - 2);
 				}
-				break;
-
-			case CAN_PACKET_FILL_RX_BUFFER_F1:
-				memcpy(rx_buffer + RxData[0], RxData + 1, RxHeader.DLC - 1);
-				i++;
+				coba++;
 				break;
 
 			}
+
 		}
 	}
+	//}
+
 }
 
 void buffer_append_int32(uint8_t *buffer, int32_t number, int32_t *index) {
@@ -99,6 +98,15 @@ void buffer_append_int32(uint8_t *buffer, int32_t number, int32_t *index) {
 	buffer[(*index)++] = number >> 16;
 	buffer[(*index)++] = number >> 8;
 	buffer[(*index)++] = number;
+}
+
+int32_t buffer_get_int32(const uint8_t *buffer, int32_t *index) {
+	int32_t res = ((uint32_t) buffer[*index]) << 24
+			| ((uint32_t) buffer[*index + 1]) << 16
+			| ((uint32_t) buffer[*index + 2]) << 8
+			| ((uint32_t) buffer[*index + 3]);
+	*index += 4;
+	return res;
 }
 
 void comm_can_transmit_eid(uint32_t id, const uint8_t *data, uint8_t len) {
@@ -114,6 +122,23 @@ void comm_can_transmit_eid(uint32_t id, const uint8_t *data, uint8_t len) {
 	HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
 }
 
+void comm_can_set_duty(uint8_t controller_id, float duty) {
+	int32_t send_index = 0;
+	uint8_t buffer[4];
+	buffer_append_int32(buffer, (int32_t) (duty * 100.0), &send_index);
+	comm_can_transmit_eid(
+			controller_id | ((uint32_t) CAN_PACKET_SET_DUTY_GEN << 8), buffer,
+			send_index);
+}
+
+void comm_can_db_signal(uint8_t controller_id, int command) {
+	int32_t send_index = 0;
+	uint8_t buffer[4];
+	buffer_append_int32(buffer, (int32_t) command, &send_index);
+	comm_can_transmit_eid(controller_id | ((uint32_t) 35 << 8), buffer,
+			send_index);
+}
+
 void comm_can_set_mode(uint8_t controller_id, int command) {
 	int32_t send_index = 0;
 	uint8_t buffer[4];
@@ -122,21 +147,12 @@ void comm_can_set_mode(uint8_t controller_id, int command) {
 			buffer, send_index);
 }
 
-void comm_can_error_massage(uint8_t controller_id, int command) {
+void comm_can_error_message(uint8_t controller_id, int command) {
 	int32_t send_index = 0;
 	uint8_t buffer[4];
 	buffer_append_int32(buffer, (int32_t) command, &send_index);
 	comm_can_transmit_eid(
 			controller_id | ((uint32_t) CAN_PACKET_ERRORMASSAGE << 8), buffer,
-			send_index);
-}
-
-void comm_can_set_duty(uint8_t controller_id, float duty) {
-	int32_t send_index = 0;
-	uint8_t buffer[4];
-	buffer_append_int32(buffer, (int32_t) (duty * 100.0), &send_index);
-	comm_can_transmit_eid(
-			controller_id | ((uint32_t) CAN_PACKET_SET_DUTY_GEN << 8), buffer,
 			send_index);
 }
 
@@ -147,7 +163,7 @@ void comm_can_send_buffer(uint8_t controller_id, uint8_t *data,
 	if (len <= 6) {
 		uint32_t ind = 0;
 		send_buffer[ind++] = controller_id;
-		send_buffer[ind++] = send;	 // untuk memilih commands pada receiver
+		send_buffer[ind++] = send;	     // untuk memilih commands pada receiver
 		memcpy(send_buffer + ind, data, len);
 		ind += len;
 		comm_can_transmit_eid(

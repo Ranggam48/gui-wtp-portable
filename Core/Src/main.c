@@ -133,8 +133,10 @@ void StartTaskTimer(void *argument);
 
 /* USER CODE BEGIN PFP */
 uint8_t selfID = 7;
+uint8_t bldcID = 0;
 uint8_t data[13] = "Hallo Rangga\n";
 uint8_t rx_buffer[RX_BUFFER_SIZE];
+uint8_t rx_buffer_f4[32];
 uint8_t buffer[20];
 
 RTC_TimeTypeDef RTC_Time;
@@ -155,7 +157,8 @@ Timer timer;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int counter, duty, erpm, indicator, flag, errorCode, timeElco, timeFiltrasi;
+int counter, duty, indicator, flag, errorCode, timeElco, timeFiltrasi, coba,
+		erpm;
 float current, oxygen, tempO2, flowO2;
 uint8_t indicator1, indicator2;
 
@@ -840,13 +843,13 @@ static void MX_GPIO_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument) {
 	/* USER CODE BEGIN 5 */
-
+	erpm = 0;
 	/* Infinite loop */
 	for (;;) {
 //		erpm = (rx_buffer[0] << 8 || rx_buffer[1]);
 //		current = (rx_buffer[0] << 8 || rx_buffer[1]) * 100.0;
 
-		comm_can_send_buffer(1, data, sizeof(data), 0);
+		//(bldcID);
 //		for (int i = 0; i < 360; i++) {
 //			counter++;
 //			osDelay(100);

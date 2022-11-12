@@ -40,15 +40,15 @@ void Screen4View::setCounter(int value) {
 
 void Screen4View::setDutyClick() {
 	float value = duty / 100.0;
-	presenter->setDutyPresenter(3, value);
+	presenter->setDutyPresenter(0, value);
 }
 
 void Screen4View::runClick() {
-	presenter->runMotorPresenter(3);
+	presenter->runMotorPresenter(0);
 }
 
 void Screen4View::stopClick() {
-	presenter->stopMotorPresenter(3);
+	presenter->stopMotorPresenter(0);
 }
 
 //void Screen4View::setDutyClick()
