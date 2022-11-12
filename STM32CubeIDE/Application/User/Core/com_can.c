@@ -73,7 +73,6 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 			case CAN_PACKET_FILL_RX_BUFFER:
 				memcpy(rx_buffer_f4 + RxData[0], RxData + 1, RxHeader.DLC - 1);
-				coba++;
 				break;
 
 			case CAN_PACKET_FILL_RX_BUFFER_LONG:
